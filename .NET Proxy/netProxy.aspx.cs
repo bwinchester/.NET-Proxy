@@ -86,7 +86,7 @@ namespace netProxy
                 {
                     string pageReferer = "";
                     if (HttpContext.Current.Request.UrlReferrer != null)
-                        pageReferer = HttpContext.Current.Request.UrlReferrer.Host.ToUpper();
+                        pageReferer = HttpContext.Current.Request.UserHostAddress;
 
                     if (string.IsNullOrEmpty(pageReferer))
                     {
