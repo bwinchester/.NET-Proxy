@@ -142,9 +142,9 @@ namespace netProxy
                 HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(remoteUrl);
                 webRequest.Method = Request.HttpMethod;
                 webRequest.ContentType = Request.ContentType;
-                webRequest.UserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36");
-                webRequest.AllowAutoRedirect(false);
-                
+                webRequest.UserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36";
+                webRequest.AllowAutoRedirect = false;
+
                 // Read and pass POST data.
                 if (Request.HttpMethod.ToUpper() == "POST")
                 {
